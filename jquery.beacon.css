@@ -46,7 +46,7 @@
   left: 0; right: 0;
   top: 0; bottom: 0;
   border-radius: 7px;
-  background: #ff5723 url(../img/plus_icon.png) center center no-repeat;
+  background: #ff3823 url(../img/search_icon.png) center center no-repeat;
   box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.51);
 }
 .beacon .marker-ripple {
@@ -55,14 +55,19 @@
   top: 0;
   right: 0;
   bottom: 0;
-  border: 1px solid #ff5723;
+  border: 1px solid #ff3823;
   border-radius: 99px;
-  margin: -10px;
-  box-shadow: 0px 0px 4px 4px #ff5723;
+  margin: -15px;
+  box-shadow: 0px 0px 8px 8px #ff3823;
   -webkit-animation-name: beacon;
-  -webkit-animation-duration: 2s;
+  -webkit-animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+
+  -moz-animation-name: beacon;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
 }
 @-webkit-keyframes beacon {
     0% {
@@ -80,5 +85,24 @@
     100% {
         opacity: 0;
         -webkit-transform: scale(1);
+    }
+}
+
+@-moz-keyframes beacon {
+    0% {
+        -moz-transform: scale(.1);
+        opacity: 0;
+    }
+    1% {
+        -moz-transform: scale(.1);
+        opacity: .6;
+    }
+    60% {
+        opacity: 0;
+        -moz-transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        -moz-transform: scale(1);
     }
 }

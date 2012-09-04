@@ -18,7 +18,6 @@
     var settings = $.extend( {}, opt);
 
     return this.each(function() {
-      console.log(msg);
       $(this).append(
         '<div class="wrapper">'+
           '<div class="infobox">'+
