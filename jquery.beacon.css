@@ -60,14 +60,25 @@
   margin: -15px;
   box-shadow: 0px 0px 8px 8px #ff3823;
   -webkit-animation-name: beacon;
-  -webkit-animation-duration: 3s;
+  -webkit-animation-duration: 2.5s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
 
   -moz-animation-name: beacon;
-  -moz-animation-duration: 3s;
+  -moz-animation-duration: 2.5s;
   -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
+  -moz-animation-timing-function: linear; 
+
+  -o-animation-name: beacon;
+  -o-animation-duration: 2.5s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+
+  animation-name: beacon;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+
 }
 @-webkit-keyframes beacon {
     0% {
@@ -104,5 +115,41 @@
     100% {
         opacity: 0;
         -moz-transform: scale(1);
+    }
+}
+@-o-keyframes beacon {
+    0% {
+        -o-transform: scale(.1);
+        opacity: 0;
+    }
+    1% {
+        -o-transform: scale(.1);
+        opacity: .6;
+    }
+    60% {
+        opacity: 0;
+        -o-transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        -o-transform: scale(1);
+    }
+}
+@keyframes beacon {
+    0% {
+        transform: scale(.1);
+        opacity: 0;
+    }
+    1% {
+        transform: scale(.1);
+        opacity: .6;
+    }
+    60% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
     }
 }
